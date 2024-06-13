@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: my-simple-mvc-framework
+    name: simple-mvc-app
     env: ruby
-    buildCommand: bundle install
+    buildCommand: bundle _2.4.22_ install
     startCommand: bundle exec ruby app.rb
     envVars:
       - key: BUNDLER_VERSION
-        value: "2.3.4"
+        value: "2.4.22"
