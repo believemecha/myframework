@@ -17,7 +17,7 @@ app = Rack::Handler::Puma
 
 # Options for Puma server
 options = {
-  Port: 9292
+    Port: ENV['PORT'] || 9292
 }
 
 # Run the application with the router
