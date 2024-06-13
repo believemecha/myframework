@@ -1,6 +1,6 @@
 require 'puma'
 require 'rack'
-require 'erb'
+require 'rack/handler/puma'
 require_relative 'config/routes'
 require_relative 'app/controllers/home_controller'
 
@@ -13,7 +13,7 @@ router.draw do
 end
 
 # Rack handler for Puma
-app = Rack::Handler.get('puma')
+app = Rack::Handler::Puma
 
 # Options for Puma server
 options = {
@@ -21,4 +21,4 @@ options = {
 }
 
 # Run the application with the router
-app.run(router, options)
+app.run(router, **options)

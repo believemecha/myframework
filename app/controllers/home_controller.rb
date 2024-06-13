@@ -1,4 +1,6 @@
 # app/controllers/home_controller.rb
+require 'erb'
+
 class HomeController
     def index
       @message = "Hsjhwgdnhg"
