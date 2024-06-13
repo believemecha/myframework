@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$1" = "s" ]; then
+    ruby app.rb
+else
+    echo "Usage: bharat s"
+fi
